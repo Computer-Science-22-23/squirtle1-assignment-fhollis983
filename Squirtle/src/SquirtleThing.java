@@ -23,6 +23,10 @@ public class SquirtleThing extends PokeThing {
 	{
 		movementPattern();
 		
+		
+		// increment by one with each step
+		squaresMoved++;
+		
 		Gui g = getBoard().getGui();
 		g.appendTextWindow("Squirtle has moved " + squaresMoved + " squares.");
 	}
