@@ -39,7 +39,8 @@ public class SquirtleThing extends PokeThing {
 	public void movementPattern()
 	{
 		// Check the 'next' Location.  If there is a PokeThing or wall there, turn.
-			// Addition: If there there is a BulbasaurThing or a FlowerThing there, print a message.
+			// Addition: If there is a BulbasaurThing or a FlowerThing there, print a message.
+				// If there is a wall there, print a message.
 		
 		boolean blocked;
 		boolean stuck;
@@ -72,7 +73,13 @@ public class SquirtleThing extends PokeThing {
 			Gui g = getBoard().getGui();
 			g.appendTextWindow("Squirtle smelled a flower.");
 		}
-			
+		
+		
+		if (stuck)
+		{
+			Gui g = getBoard().getGui();
+			g.appendTextWindow("Squirtle hit a wall.");
+		}
 				
 		move();
 	}
